@@ -14,16 +14,19 @@ Console.WriteLine("Klassement voor de race:");
 var rankingService = serviceProvider.GetService<IRankingService>();
 rankingService.DisplayRanking();
 
-Console.WriteLine("Druk op een toets om de race te starten\n\n");
-Console.ReadKey();
+while (true)
+{
+    Console.WriteLine("Druk op een toets om een nieuwe race te starten\n\n");
+    Console.ReadKey();
 
-//start de race simulatie
-var race = serviceProvider.GetService<Race>();
-var raceResult = await race.StartRace();
+    //start de race simulatie
+    var race = serviceProvider.GetService<Race>();
+    var raceResult = await race.StartRace();
 
-//werk rankings bij
-rankingService.UpdateRankings(raceResult);
+    //werk rankings bij
+    rankingService.UpdateRankings(raceResult);
 
-//rankings na de race
-Console.WriteLine("\n\nKlassement na de race:");
-rankingService.DisplayRanking();
+    //rankings na de race
+    Console.WriteLine("\n\nKlassement na de race:");
+    rankingService.DisplayRanking();
+}

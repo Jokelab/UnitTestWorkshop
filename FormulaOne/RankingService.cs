@@ -37,10 +37,10 @@
         public void DisplayRanking()
         {
             var rank = 1;
-            Console.WriteLine(String.Format("\t  {0,20}|{1,20}|{2,10}|{3,10}|{4,10}|", "Naam", "Team", "Punten", "#Wins", "#Podiums"));
+            Console.WriteLine(String.Format("\t\t  {0,20}|{1,20}|{2,10}|{3,10}|{4,10}|", "Naam", "Team", "Punten", "#Wins", "#Podiums"));
             foreach (var driver in _driverDatabase.GetDrivers().OrderByDescending(x => x.Points))
             {
-                Console.WriteLine($"Rank #{rank}\t: {driver}");
+                Console.WriteLine($"Rank #{rank:d2}\t: {driver}");
                 rank++;
             }
         }
