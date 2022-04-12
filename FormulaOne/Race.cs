@@ -36,7 +36,7 @@ namespace FormulaOne.Game
                 results.Add(result);
 
                 drivers.RemoveAt(index);
-                await Task.Delay(_random.Next(0, 3000));
+                await Task.Delay(_random.Next(0, 2000));
                 _positionCounter++;
             }
             return results;

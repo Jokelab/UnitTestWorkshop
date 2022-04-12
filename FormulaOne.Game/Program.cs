@@ -16,7 +16,7 @@ rankingService.DisplayRanking();
 
 while (true)
 {
-    Console.WriteLine("Druk op een toets om een nieuwe race te starten\n\n");
+    Console.WriteLine("\nDruk op een toets om een nieuwe race te starten\n\n");
     Console.ReadKey();
 
     //start de race simulatie
