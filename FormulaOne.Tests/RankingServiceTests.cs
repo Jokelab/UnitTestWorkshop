@@ -29,7 +29,7 @@ namespace FormulaOne.Tests
             const int currentPoints = 10;
             const int raceResultPoints = 6;
             const int raceResultPosition = 7;
-            _pointCalculatorServiceMock.Setup(x => x.CalculatePoints(1, It.IsAny<bool>())).Returns(raceResultPoints);
+            _pointCalculatorServiceMock.Setup(x => x.CalculatePoints(raceResultPosition, It.IsAny<bool>())).Returns(raceResultPoints);
             _driverDatabaseMock.Setup(x => x.GetDriverByName(driverName)).Returns(
                 new Driver() { Name = driverName, Points = currentPoints, WinCount = 3, PodiumCount = 1 });
             var sut = CreateSut();
