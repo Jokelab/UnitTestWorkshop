@@ -86,7 +86,7 @@ namespace FormulaOne.Tests
             //act
             sut.UpdateRankings(result);
 
-            //assert: aantal wins is opgehoogd
+            //assert: aantal keren podium is opgehoogd
             _driverDatabaseMock.Verify(x => x.UpdateDriverRanking(driverName, It.IsAny<int>(), It.IsAny<int>(), currentPodiumCount + 1), Times.Once);
         }
 
@@ -100,7 +100,7 @@ namespace FormulaOne.Tests
             //act
             sut.UpdateRankings(result);
 
-            //assert: aantal wins is opgehoogd
+            //assert: update is nooit aangeroepen
             _driverDatabaseMock.Verify(x => x.UpdateDriverRanking(It.IsAny<string>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>()), Times.Never);
         }
 
