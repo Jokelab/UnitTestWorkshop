@@ -2,7 +2,7 @@
 {
     public class DriverDatabase : IDriverDatabase
     {
-        private Driver[] _drivers =
+        private static Driver[] _drivers =
             {
                 new Driver{ Name = "C. Leclerc", Team = "Scuderia Ferrari", Points = 71, WinCount = 2, PodiumCount = 3},
                 new Driver{ Name = "G. Russel", Team="Mercedes", Points = 37, WinCount = 0, PodiumCount = 1},
