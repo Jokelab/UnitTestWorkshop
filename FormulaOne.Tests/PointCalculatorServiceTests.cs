@@ -12,7 +12,7 @@ namespace FormulaOne.Tests
         {
             return new PointCalculatorService();
         }
-
+        
         [Test]
         public void CalculatePoints_should_return_25_when_position_1()
         {
