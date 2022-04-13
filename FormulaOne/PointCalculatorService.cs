@@ -20,11 +20,10 @@ namespace FormulaOne
         /// Achtste: 4 punten
         /// Negende: 2 punten
         /// Tiende: 1 punt
-        /// De rest krijgt 0 punten.
-        /// Degene met de snelste ronde krijgt 1 punt erbij.
+        /// De rest krijgt 0 punten. Degene met de snelste rondetijd krijgt 1 punt erbij.
         /// </summary>
-        /// <param name="position"></param>
-        /// <param name="fastestLap"></param>
+        /// <param name="position">De finish positie (winnaar is 1, tweede is 2 etc.)</param>
+        /// <param name="fastestLap">Geeft aan of degene op deze positie wel/niet de snelste rondetijd had</param>
         /// <returns></returns>
         public int CalculatePoints(int position, bool fastestLap)
         {
