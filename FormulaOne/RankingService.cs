@@ -30,7 +30,7 @@
                 {
                     driver.PodiumCount++;
                 }
-                _driverDatabase.UpdateDriverRanking(driver.Name, driver.Points, driver.PodiumCount, driver.WinCount);
+                _driverDatabase.UpdateDriverRanking(driver.Name, driver.Points, driver.WinCount, driver.PodiumCount);
             }
         }
 
